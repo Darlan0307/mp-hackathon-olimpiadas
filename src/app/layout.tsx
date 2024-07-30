@@ -4,7 +4,7 @@ import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import AsideComponent from "@/components/aside-component";
 import HeaderComponent from "@/components/header-component";
-import { ThemeProvider } from "@/components/theme-provider";
+import Providers from "./providers/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           <TooltipProvider>
             <div className="flex min-h-screen w-full flex-col bg-muted/40">
               <AsideComponent />
@@ -37,7 +32,7 @@ export default function RootLayout({
               </div>
             </div>
           </TooltipProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
