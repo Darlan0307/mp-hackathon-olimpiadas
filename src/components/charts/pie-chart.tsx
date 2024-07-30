@@ -27,19 +27,6 @@ const chartData = [
   { browser: "other", visitors: 190, fill: "var(--color-other)" },
 ];
 
-// {
-//   "id": "UZB",
-//   "name": "Uzbequistão",
-//   "continent": "ASI",
-//   "flag_url": "https://codante.s3.amazonaws.com/codante-apis/olympic-games/flags/UZB.png",
-//   "gold_medals": 1,
-//   "silver_medals": 0,
-//   "bronze_medals": 0,
-//   "total_medals": 1,
-//   "rank": 15,
-//   "rank_total_medals": 22
-//   }
-
 const chartConfig = {
   total_medals: {
     label: "Total Medals",
@@ -60,15 +47,12 @@ const chartConfig = {
 
 type PieChartComponentProps = {
   data: CountryType[];
-  id: string;
 };
 
-export function PieChartComponent({ data, id }: PieChartComponentProps) {
+export function PieChartComponent({ data }: PieChartComponentProps) {
   const totalVisitors = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
   }, []);
-
-  const dataSelected = data.find((item) => item.id === id);
 
   return (
     <Card className="flex flex-col">
@@ -87,7 +71,7 @@ export function PieChartComponent({ data, id }: PieChartComponentProps) {
               content={<ChartTooltipContent hideLabel />}
             />
             <Pie
-              data={dataSelected}
+              data={chartData}
               dataKey="total_medals"
               nameKey="name"
               innerRadius={60}
@@ -108,7 +92,7 @@ export function PieChartComponent({ data, id }: PieChartComponentProps) {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          120
+                          {totalVisitors}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
