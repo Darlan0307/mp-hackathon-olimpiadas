@@ -1,4 +1,5 @@
 "use client";
+import { BarChartComponent } from "@/components/charts/bar-chart";
 import Loader from "@/components/loader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCountries } from "@/hooks/use-countries";
@@ -41,8 +42,8 @@ export default function Home() {
           <h2>area de grafico</h2>
         </div>
       </div>
-      <div className="min-h-[50vh] border border-solid border-black">
-        <p>grafico de pizza ou rosca</p>
+      <div>
+        <BarChartComponent data={dataCountries} />{" "}
       </div>
     </main>
   );
