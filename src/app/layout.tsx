@@ -4,7 +4,7 @@ import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import AsideComponent from "@/components/aside-component";
 import HeaderComponent from "@/components/header-component";
-import Providers from "./providers/providers";
+import Providers from "../providers/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
