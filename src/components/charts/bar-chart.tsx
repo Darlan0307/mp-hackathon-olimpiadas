@@ -1,6 +1,5 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, Cell, XAxis, YAxis } from "recharts";
 
 import {
