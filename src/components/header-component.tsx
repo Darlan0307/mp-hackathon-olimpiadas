@@ -2,7 +2,9 @@
 import Link from "next/link";
 import {
   Flag,
+  Github,
   Home,
+  Linkedin,
   PanelLeft,
   SquareDashedBottomCode,
   Trophy,
@@ -18,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Separator } from "./ui/separator";
 
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +66,7 @@ const HeaderComponent = () => {
               <span className="sr-only">Acme Inc</span>
             </Link>
           </SheetTitle>
-          <nav className="grid gap-6 text-lg font-medium">
+          <nav className="grid  gap-6 text-lg font-medium ">
             {Links.map((link) => (
               <Link
                 key={link.href}
@@ -79,6 +82,29 @@ const HeaderComponent = () => {
                 {link.label}
               </Link>
             ))}
+          </nav>
+          <Separator className="my-6" />
+          <nav className="grid gap-6 text-lg font-medium">
+            <Link
+              href="https://github.com/Darlan0307"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-4 px-2.5 text-foreground hover:text-foreground"
+            >
+              <Github className="h-5 w-5" />
+              Github
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/darlan-martins-8a7956259/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-4 px-2.5 text-foreground hover:text-foreground"
+            >
+              <Linkedin className="h-5 w-5" />
+              LinkedIn
+            </Link>
           </nav>
         </SheetContent>
       </Sheet>

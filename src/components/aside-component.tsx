@@ -4,7 +4,14 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Flag, Home, SquareDashedBottomCode, Trophy } from "lucide-react";
+import {
+  Flag,
+  Github,
+  Home,
+  Linkedin,
+  SquareDashedBottomCode,
+  Trophy,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -57,6 +64,32 @@ const AsideComponent = () => {
             <TooltipContent side="right">{link.label}</TooltipContent>
           </Tooltip>
         ))}
+      </nav>
+      <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-4">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Link
+              href="https://github.com/Darlan0307"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-5 w-5" />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side="right">Github</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Link
+              href="https://www.linkedin.com/in/darlan-martins-8a7956259/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="h-5 w-5" />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side="right">Linkedin</TooltipContent>
+        </Tooltip>
       </nav>
     </aside>
   );
