@@ -1,5 +1,6 @@
 "use client";
 import { BarChartComponent } from "@/components/charts/bar-chart";
+import { ColChartComponent } from "@/components/charts/col-chart";
 import Loader from "@/components/loader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCountries } from "@/hooks/use-countries";
@@ -38,13 +39,10 @@ export default function Home() {
           </Card>
         </div>
 
-        <div>
-          <h2>area de grafico</h2>
-        </div>
+        <ColChartComponent data={dataCountries} />
       </div>
-      <div>
-        <BarChartComponent data={dataCountries} />{" "}
-      </div>
+
+      <BarChartComponent data={dataCountries} />
     </main>
   );
 }

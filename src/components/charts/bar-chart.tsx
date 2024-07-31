@@ -46,13 +46,16 @@ export function BarChartComponent({ data }: BarChartComponentProps) {
       fill: colors[index % colors.length],
     }));
   return (
-    <Card className=" mx-auto w-[300px] min-[450px]:w-[400px] md:w-full">
+    <Card className="h-full flex flex-col mx-auto w-[320px] min-[400px]:w-full">
       <CardHeader>
-        <CardTitle>Bar Chart - Top 10 Medals</CardTitle>
-        <CardDescription>Olympic Games Medals</CardDescription>
+        <CardTitle>Top 10 Ranking Medals</CardTitle>
+        <CardDescription>Olympic Games </CardDescription>
       </CardHeader>
-      <CardContent className="h-[80vh] w-full">
-        <ChartContainer className="h-full w-full" config={chartConfig}>
+      <CardContent className="h-[80vh] w-full flex-1">
+        <ChartContainer
+          className="mx-auto h-full w-[300px] min-[450px]:w-[400px] md:w-[500px] lg:w-full"
+          config={chartConfig}
+        >
           <BarChart
             accessibilityLayer
             data={newArr}
@@ -91,7 +94,7 @@ export function BarChartComponent({ data }: BarChartComponentProps) {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-start gap-2 text-lg">
         <div className="leading-none text-muted-foreground">
           2024 Olympic Games Medals
         </div>

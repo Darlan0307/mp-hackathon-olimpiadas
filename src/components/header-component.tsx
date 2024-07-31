@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Flag, Home, Package2, PanelLeft } from "lucide-react";
+import { Flag, Home, PanelLeft, SquareDashedBottomCode } from "lucide-react";
 
 import {
   Sheet,
@@ -26,7 +26,7 @@ const HeaderComponent = () => {
               href="/"
               className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
             >
-              <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
+              <SquareDashedBottomCode className="h-8 w-8 transition-all group-hover:scale-110" />
               <span className="sr-only">Acme Inc</span>
             </Link>
           </SheetTitle>
