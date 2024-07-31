@@ -10,12 +10,7 @@ import {
   Trophy,
 } from "lucide-react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
 import { usePathname } from "next/navigation";
