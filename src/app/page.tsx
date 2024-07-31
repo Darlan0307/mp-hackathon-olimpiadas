@@ -25,7 +25,7 @@ export default function Home() {
           >
             <CardHeader className="pb-2">
               <CardTitle className="text-center text-xl mb-2">
-                number of countries in the olympic games
+                countries in the olympic games
               </CardTitle>
             </CardHeader>
             <CardContent>
