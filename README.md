@@ -1,91 +1,61 @@
-![Logo do projeto](https://i.imgur.com/kniMQHu.png)
+![Logo do projeto](./print.png)
 
-# Nome do Projeto
+# Olympic Games 2024
 
-Uma breve descrição do projeto aqui.
+## 🔥 Introduction
 
-## 🔥 Introdução
+Dashboard with analyzes of the 2024 Olympics, with analyzes of the games, medals, countries and continents.
 
-Coloque aqui as instruções e quais são os objetivos desse projeto, funcionalidades.
-
-### ⚙️ Pré-requisitos
-
-Coloque aqui passo a passo que precisa para instalar o projeto e como instalá-lo.
+### ⚙️ Prerequisites
 
 ```
-Pode inserir exemplos.
+node
+git
 ```
 
-### 🔨 Guia de instalação
+### 🔨 Installation Guide
 
-Explique aqui um passo a passo mostrando como deve executar para ter um ambiente de desenvolvimento em execução, desde instalar e rodar o projeto.
+Steps to install:
 
-Etapas para instalar:
-
-```
-Codigo, exemplos
-```
-
-Passo 2:
+Step 1:
 
 ```
-Codigo, exemplos
+git clone https://github.com/Darlan0307/mp-hackathon-olimpiadas.git
 ```
 
-## 🛠️ Executando os testes (caso tenha testes)
-
-Explique como executar os testes automatizados para este sistema.
+Step 2:
 
 ```
-Coloque exemplos
+cd mp-hackathon-olimpiadas
 ```
 
-## 📦 Tecnologias usadas:
+Step 3:
 
-Coloque aqui as ferramentas que você usou para criar seu projeto, exemplo:
+```
+npm install
+```
 
-- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+Step 4:
+
+```
+npm run dev
+```
+
+access the application locally at [localhost:3000](http://localhost:3000)
+
+access the application in production [Hackathon Olimpiadas](https://mp-hackathon-olimpiadas.vercel.app/)
+
+## 📦 Technologies used:
+
 - ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-* Link para pegar as badges: https://github.com/Ileriayo/markdown-badges
+## 👷 Author
 
-Ou pode separar por stacks:
+- **Darlna Martins** - [Web Developer](https://www.linkedin.com/in/darlan-martins-8a7956259/)
 
-**Front-end:**
+## 💡 Expressions of gratitude
 
-- [React JS](https://react.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
-
-**Back-end:**
-
-- [NodeJS](https://nodejs.org/).
-- [TypeScript](https://www.typescriptlang.org/)
-- [Mongo DB](https://mongodb.com/)
-
-## 👷 Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início, colaboradores.
-
-- **Nome do dev** - _Função realizada_ - [nome_do_dev](https://github.com/link_do_Perfil)
-- **Sujeito Programador** - _Frontend do projeto_ - [@sujeitoprogramador](https://github.com/devfraga)
-
-## 📄 Licença
-
-Esse projeto está sob a licença (nome da licença) - acesse os detalhes [LICENSE.md](https://github.com/link_da_licenca).
-
-## 💭 FAQ - Perguntas frequentes
-
-#### Questão 1
-
-Resposta 1
-
-#### Questão 2
-
-Resposta 2
-
-## 💡 Expressões de gratidão
-
-- Um agradecimento publicamente.
-- Para suporte, mande um email para nome@teste.com.
-- Link para o seu linkedin [Meu linkedin](https://www.linkedin.com/in/darlan-martins-8a7956259/)
+- A public thank you to the staff at [Codante](https://codante.io/) for helping to develop the api that I used in the project.
