@@ -21,14 +21,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { useCountries } from "@/hooks/use-countries";
 import Loader from "@/components/loader";
+import PaginationList from "./_components/pagination-list";
 
 export default function Countries() {
-  const { dataCountries } = useCountries();
+  const { dataCountries, currentPage, nextPage, previousPage } = useCountries();
 
   if (dataCountries.length == 0) return <Loader />;
 
   return (
-    <main className="p-4 mt-4">
+    <main className="p-4 mt-4 sm:mt-0">
       <Card>
         <CardHeader>
           <CardTitle>Countries</CardTitle>
@@ -63,7 +64,7 @@ export default function Countries() {
                   </TableCell>
                   <TableCell className="font-medium">{country.name}</TableCell>
                   <TableCell className="mx-auto text-center">
-                    <Badge variant="outline">{country.continent}</Badge>
+                    <Badge variant="outline">{country.continent || "-"}</Badge>
                   </TableCell>
                   <TableCell className="mx-auto text-center">
                     <Badge variant="outline">{country.rank}</Badge>
@@ -82,8 +83,12 @@ export default function Countries() {
           </Table>
         </CardContent>
         <CardFooter>
-          <div className="text-xs text-muted-foreground">
-            Showing <strong>1-10</strong> of <strong>32</strong> products
+          <div className="flex justify-center w-full">
+            <PaginationList
+              currentPage={currentPage}
+              nextPage={nextPage}
+              previousPage={previousPage}
+            />
           </div>
         </CardFooter>
       </Card>
