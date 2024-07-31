@@ -4,7 +4,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Flag, Home, SquareDashedBottomCode } from "lucide-react";
+import { Flag, Home, SquareDashedBottomCode, Trophy } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,6 +21,11 @@ const AsideComponent = () => {
       href: "/countries",
       icon: <Flag className="h-5 w-5" />,
       label: "Countries",
+    },
+    {
+      href: "/events",
+      icon: <Trophy className="h-5 w-5" />,
+      label: "Events",
     },
   ];
 

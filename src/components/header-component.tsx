@@ -1,6 +1,12 @@
 "use client";
 import Link from "next/link";
-import { Flag, Home, PanelLeft, SquareDashedBottomCode } from "lucide-react";
+import {
+  Flag,
+  Home,
+  PanelLeft,
+  SquareDashedBottomCode,
+  Trophy,
+} from "lucide-react";
 
 import {
   Sheet,
@@ -27,6 +33,11 @@ const HeaderComponent = () => {
       href: "/countries",
       icon: <Flag className="h-5 w-5" />,
       label: "Countries",
+    },
+    {
+      href: "/events",
+      icon: <Trophy className="h-5 w-5" />,
+      label: "Events",
     },
   ];
   return (

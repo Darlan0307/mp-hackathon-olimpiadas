@@ -46,7 +46,7 @@ export function BarChartComponent({ data }: BarChartComponentProps) {
       fill: colors[index % colors.length],
     }));
   return (
-    <Card className=" min-h-[80vh] sm:h-full flex flex-col mx-auto w-[320px] min-[400px]:w-full">
+    <Card className=" min-h-[80vh] sm:h-full flex flex-col mx-auto w-[300px] min-[400px]:w-full">
       <CardHeader>
         <CardTitle>Top 10 Ranking Medals</CardTitle>
         <CardDescription>Olympic Games </CardDescription>

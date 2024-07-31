@@ -76,7 +76,7 @@ export function ColChartComponent({ data }: ColChartComponentProps) {
   }, [widthScreen, handleResize, qtdItems, data]);
 
   return (
-    <Card className="mx-auto w-[320px] min-[400px]:w-full">
+    <Card className="mx-auto w-[300px] min-[400px]:w-full">
       <CardHeader>
         <CardTitle>Comparison of medal types</CardTitle>
         <CardDescription>

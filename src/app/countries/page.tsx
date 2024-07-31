@@ -21,7 +21,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { useCountries } from "@/hooks/use-countries";
 import Loader from "@/components/loader";
-import PaginationList from "./_components/pagination-list";
+import PaginationList from "../../components/pagination-list";
 
 export default function Countries() {
   const { dataCountries, currentPage, nextPage, previousPage } = useCountries();

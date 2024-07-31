@@ -16,7 +16,7 @@ export interface CountryType {
   rank_total_medals: number;
 }
 
-interface LinksType {
+export interface LinksType {
   first: string;
   last: string;
   prev: string;
