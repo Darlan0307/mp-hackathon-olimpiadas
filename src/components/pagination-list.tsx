@@ -24,7 +24,7 @@ const PaginationList = ({
 }: PaginationListProps) => {
   return (
     <Pagination>
-      <PaginationContent>
+      <PaginationContent className="flex flex-wrap gap-4 justify-center p-2">
         <PaginationItem>
           <Button
             disabled={currentPage === 1}

@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <TooltipProvider>
+          <TooltipProvider delayDuration={100}>
             <div className="flex min-h-screen w-full flex-col bg-muted/40">
               <AsideComponent />
               <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
