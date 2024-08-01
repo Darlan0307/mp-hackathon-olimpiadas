@@ -59,7 +59,9 @@ export function BarChartComponent({ data }: BarChartComponentProps) {
             accessibilityLayer
             data={newArr}
             layout="vertical"
-            margin={{ left: 20 }}
+            margin={{ left: 20, right: 20, bottom: 20, top: 20 }}
+            barSize={40}
+            barGap={10}
           >
             <YAxis
               dataKey="name"
