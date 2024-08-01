@@ -11,11 +11,11 @@ const Events = () => {
   if (dataEvents.length == 0) return <Loader />;
 
   return (
-    <main>
-      <h1 className="text-xl pl-5 my-6 text-center sm:text-left">
+    <main className="max-w-[1500px] mx-auto">
+      <h1 className="text-xl pl-5 mt-6 mb-6 sm:mt-0 text-center sm:text-left sm:pl-[8vw]">
         List of Games/Events
       </h1>
-      <section className="flex flex-wrap gap-5 justify-center items-center">
+      <section className="flex flex-wrap gap-5 justify-center items-center h-[70vh] overflow-y-auto [&::-webkit-scrollbar]:hidden">
         {dataEvents.map((data) => (
           <EventItem key={data.id} data={data} />
         ))}

@@ -24,43 +24,47 @@ const positionIcon = [
 
 const EventItem = ({ data }: EventItemProps) => {
   return (
-    <Card className="flex flex-col w-[300px] relative ">
+    <Card className="flex flex-col w-[300px]">
       <CardHeader>
-        <CardTitle>{data.event_name}</CardTitle>
+        <CardTitle className="flex items-center gap-2 justify-between">
+          {data.discipline_name}{" "}
+          <Badge variant="secondary">{data.status}</Badge>
+        </CardTitle>
         <CardDescription>{data.detailed_event_name}</CardDescription>
       </CardHeader>
       <CardContent
-        className={`flex flex-col gap-2 min-h-[210px] max-h-[210px] overflow-y-auto [&::-webkit-scrollbar]:hidden ${
+        className={`flex flex-col gap-2 h-[150px] ${
           data.competitors.length == 2 ? "mx-auto" : ""
         }`}
       >
-        {data.competitors.map((competitor) => (
-          <div key={crypto.randomUUID()}>
-            <div className="flex items-center gap-2">
-              <Avatar>
-                <AvatarImage src={competitor.country_flag_url} />
-                <AvatarFallback>
-                  {competitor.competitor_name.slice(0, 2).toUpperCase()}
-                </AvatarFallback>
-              </Avatar>
-              <p className="text-sm text-muted-foreground">
-                {competitor.competitor_name}
-              </p>
-              {data.competitors.length == 2 && competitor.position == 0 && (
-                <Crown className="h-8 w-8" color="#d3a01f" />
-              )}
-              {data.competitors.length > 2 && competitor.position < 3 && (
-                <>{positionIcon[competitor.position].icon}</>
-              )}
-            </div>
-            {data.competitors.length == 2 && competitor.position == 0 && (
-              <h2 className="text-3xl text-center">VS</h2>
-            )}
-          </div>
-        ))}
-        <Badge className="absolute top-2 right-2" variant="secondary">
-          {data.status}
-        </Badge>
+        {data.competitors.map((competitor) => {
+          if (competitor.position < 3) {
+            return (
+              <div key={crypto.randomUUID()}>
+                <div className="flex items-center gap-2">
+                  <Avatar>
+                    <AvatarImage src={competitor.country_flag_url} />
+                    <AvatarFallback>
+                      {competitor.competitor_name.slice(0, 2).toUpperCase()}
+                    </AvatarFallback>
+                  </Avatar>
+                  <p className="text-sm text-muted-foreground">
+                    {competitor.competitor_name}
+                  </p>
+                  {data.competitors.length == 2 && competitor.position == 0 && (
+                    <Crown className="h-8 w-8" color="#d3a01f" />
+                  )}
+                  {data.competitors.length > 2 && competitor.position < 3 && (
+                    <>{positionIcon[competitor.position].icon}</>
+                  )}
+                </div>
+                {data.competitors.length == 2 && competitor.position == 0 && (
+                  <h2 className="text-3xl text-center">VS</h2>
+                )}
+              </div>
+            );
+          }
+        })}
       </CardContent>
       <CardFooter className="grid grid-cols-2 gap-2 mt-3">
         <p className="text-sm text-muted-foreground">{data.day}</p>

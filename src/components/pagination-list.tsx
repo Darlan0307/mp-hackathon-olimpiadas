@@ -4,7 +4,6 @@ import {
   PaginationContent,
   PaginationItem,
 } from "@/components/ui/pagination";
-import { scrollTop } from "@/utils/scrool-top";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 interface PaginationListProps {
@@ -26,7 +25,6 @@ const PaginationList = ({
             disabled={currentPage === 1}
             onClick={() => {
               previousPage();
-              scrollTop();
             }}
             variant="secondary"
           >
@@ -45,7 +43,6 @@ const PaginationList = ({
             disabled={currentPage === 5}
             onClick={() => {
               nextPage();
-              scrollTop();
             }}
             variant="secondary"
           >

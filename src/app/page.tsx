@@ -25,7 +25,7 @@ export default function Home() {
           >
             <CardHeader className="pb-2">
               <CardTitle className="text-center text-xl mb-2">
-                countries in the olympic games
+                Countries in the olympic games
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -36,7 +36,7 @@ export default function Home() {
                   color="hsl(var(--chart-1))"
                 />
                 <h3 className="absolute left-1/2 -translate-x-1/2 bottom-4 w-full text-center">
-                  total of countries
+                  Total of countries
                 </h3>
               </div>
             </CardContent>
@@ -48,14 +48,14 @@ export default function Home() {
           >
             <CardHeader className="pb-2">
               <CardTitle className="text-center text-xl mb-2">
-                the most participatory continent
+                The most participatory continent
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="relative">
                 <RadialChartContinentComponent data={continents} />
                 <h3 className="absolute left-1/2 -translate-x-1/2 bottom-4 w-full text-center">
-                  countries by continent
+                  Countries by continent
                 </h3>
               </div>
             </CardContent>

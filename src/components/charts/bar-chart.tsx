@@ -59,9 +59,7 @@ export function BarChartComponent({ data }: BarChartComponentProps) {
             accessibilityLayer
             data={newArr}
             layout="vertical"
-            margin={{
-              left: 20,
-            }}
+            margin={{ left: 20 }}
           >
             <YAxis
               dataKey="name"
@@ -73,7 +71,7 @@ export function BarChartComponent({ data }: BarChartComponentProps) {
                 if (value.length > 8) return value.slice(0, 8) + "...";
                 return value;
               }}
-              className="font-bold"
+              className="font-bold "
             />
             <XAxis dataKey="total_medals" type="number" hide />
             <ChartTooltip

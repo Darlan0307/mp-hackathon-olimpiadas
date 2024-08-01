@@ -29,7 +29,7 @@ export default function Countries() {
   if (dataCountries.length == 0) return <Loader />;
 
   return (
-    <main className="p-4 mt-4 sm:mt-0">
+    <main className="p-4 mt-4 sm:mx-8 sm:mt-0">
       <Card>
         <CardHeader>
           <CardTitle>Countries</CardTitle>
@@ -37,7 +37,7 @@ export default function Countries() {
             List of countries in the olympic games
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="h-[60vh] overflow-y-auto [&::-webkit-scrollbar]:hidden">
           <Table>
             <TableHeader>
               <TableRow>
@@ -82,7 +82,7 @@ export default function Countries() {
             </TableBody>
           </Table>
         </CardContent>
-        <CardFooter>
+        <CardFooter className="mt-5">
           <div className="flex justify-center w-full">
             <PaginationList
               currentPage={currentPage}
