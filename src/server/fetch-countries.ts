@@ -1,6 +1,7 @@
 "use server";
 
 import { DataResponseType } from "@/@types/country-type";
+import { totalmem } from "os";
 
 export const fetchCountries = async (page: number) => {
   try {
@@ -15,6 +16,7 @@ export const fetchCountries = async (page: number) => {
       return {
         data: data.data,
         totalPages: data.meta.last_page,
+        totalCountries: data.meta.total,
       };
     } else {
       throw new Error("Invalid data format");
@@ -24,6 +26,7 @@ export const fetchCountries = async (page: number) => {
     return {
       data: [],
       totalPages: 0,
+      totalCountries: 0,
     };
   }
 };

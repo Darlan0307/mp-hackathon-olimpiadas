@@ -5,8 +5,9 @@ import { useCallback, useEffect, useState } from "react";
 
 export const useCountries = () => {
   const [dataCountries, setDataCountries] = useState<CountryType[]>([]);
-  const [totalCountries, setTotalCountries] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalCountries, setTotalCountries] = useState(0);
 
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
@@ -21,9 +22,12 @@ export const useCountries = () => {
   };
 
   const fetchDataCountries = useCallback(async () => {
-    const { data, totalPages } = await fetchCountries(currentPage);
+    const { data, totalPages, totalCountries } = await fetchCountries(
+      currentPage
+    );
     setDataCountries(data);
-    setTotalCountries(totalPages);
+    setTotalPages(totalPages);
+    setTotalCountries(totalCountries);
   }, [currentPage]);
 
   useEffect(() => {
@@ -32,6 +36,7 @@ export const useCountries = () => {
 
   return {
     dataCountries,
+    totalPages,
     totalCountries,
     currentPage,
     previousPage,
