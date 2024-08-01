@@ -16,6 +16,10 @@ export const useEvents = () => {
     setCurrentPage(currentPage + 1);
   };
 
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+  };
+
   const fetchDataEvents = useCallback(async () => {
     const { data, totalPages } = await fetchEvents(currentPage);
     setDataEvents(data);
@@ -32,5 +36,6 @@ export const useEvents = () => {
     currentPage,
     previousPage,
     nextPage,
+    goToPage,
   };
 };

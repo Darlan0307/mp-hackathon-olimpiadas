@@ -6,7 +6,14 @@ import Loader from "@/components/loader";
 import PaginationList from "@/components/pagination-list";
 
 const Events = () => {
-  const { dataEvents, currentPage, nextPage, previousPage } = useEvents();
+  const {
+    dataEvents,
+    currentPage,
+    nextPage,
+    previousPage,
+    totalEvents,
+    goToPage,
+  } = useEvents();
 
   if (dataEvents.length == 0) return <Loader />;
 
@@ -25,6 +32,8 @@ const Events = () => {
           currentPage={currentPage}
           nextPage={nextPage}
           previousPage={previousPage}
+          totalPages={totalEvents}
+          goToPage={goToPage}
         />
       </section>
     </main>

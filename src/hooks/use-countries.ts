@@ -16,6 +16,10 @@ export const useCountries = () => {
     setCurrentPage(currentPage + 1);
   };
 
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+  };
+
   const fetchDataCountries = useCallback(async () => {
     const { data, totalPages } = await fetchCountries(currentPage);
     setDataCountries(data);
@@ -32,5 +36,6 @@ export const useCountries = () => {
     currentPage,
     previousPage,
     nextPage,
+    goToPage,
   };
 };

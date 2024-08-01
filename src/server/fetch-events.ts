@@ -14,7 +14,7 @@ export const fetchEvents = async (page: number) => {
     if (data && data.data) {
       return {
         data: data.data,
-        totalPages: data.meta.total,
+        totalPages: data.meta.last_page,
       };
     } else {
       throw new Error("Invalid data format");

@@ -24,7 +24,14 @@ import Loader from "@/components/loader";
 import PaginationList from "../../components/pagination-list";
 
 export default function Countries() {
-  const { dataCountries, currentPage, nextPage, previousPage } = useCountries();
+  const {
+    dataCountries,
+    currentPage,
+    nextPage,
+    previousPage,
+    totalCountries,
+    goToPage,
+  } = useCountries();
 
   if (dataCountries.length == 0) return <Loader />;
 
@@ -88,6 +95,8 @@ export default function Countries() {
               currentPage={currentPage}
               nextPage={nextPage}
               previousPage={previousPage}
+              totalPages={totalCountries}
+              goToPage={goToPage}
             />
           </div>
         </CardFooter>
