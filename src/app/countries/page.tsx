@@ -31,6 +31,7 @@ export default function Countries() {
     previousPage,
     totalCountries,
     goToPage,
+    totalPages,
   } = useCountries();
 
   if (dataCountries.length == 0) return <Loader />;
@@ -95,7 +96,7 @@ export default function Countries() {
               currentPage={currentPage}
               nextPage={nextPage}
               previousPage={previousPage}
-              totalPages={totalCountries}
+              totalPages={totalPages}
               goToPage={goToPage}
             />
           </div>
